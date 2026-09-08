@@ -34,20 +34,6 @@ const SERVICES = [
     icon: 'biometric'
   },
   {
-    key: 'i9_verification',
-    title: 'I-9 Employment Verification',
-    description: 'Remote and mobile I-9 verification services for employers and employees.',
-    status: 'coming_soon',
-    icon: 'id'
-  },
-  {
-    key: 'document_prep',
-    title: 'Document Preparation Assistance',
-    description: 'Professional preparation assistance to help ensure accuracy and completeness.',
-    status: 'coming_soon',
-    icon: 'documents'
-  },
-  {
     key: 'corporate',
     title: 'Corporate & Business Services',
     description: 'Business document signings, resolutions, agreements, and more.',
@@ -58,14 +44,14 @@ const SERVICES = [
     key: 'apostille',
     title: 'Apostille & Authentication Support',
     description: 'Guidance and assistance with apostille and document authentication.',
-    status: 'coming_soon',
+    status: 'available',
     icon: 'apostille'
   },
   {
     key: 'trust_estate',
     title: 'Trust & Estate Document Signings',
     description: 'Compassionate, professional handling of sensitive and important documents.',
-    status: 'coming_soon',
+    status: 'available',
     icon: 'scales'
   }
 ];
