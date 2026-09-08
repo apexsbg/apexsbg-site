@@ -94,13 +94,9 @@ const FAQS = [
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
-// Header transparency toggle
+// Header is solid on this design (hero is white) — no scroll-based transparency
 const header = $('#siteHeader');
-function updateHeader() {
-  header.dataset.transparent = window.scrollY > 80 ? 'false' : 'true';
-}
-window.addEventListener('scroll', updateHeader, { passive: true });
-updateHeader();
+header.dataset.transparent = 'false';
 
 // Mobile nav toggle
 const navToggle = $('#navToggle');
