@@ -26,7 +26,7 @@
     "slogan": "Professional by Standard. Trusted by Choice.",
     "description": "Professional signing, notarial, apostille facilitation, and biometric services.",
     "url": "https://apexsbg-demo.pages.dev",
-    "email": "toosecure5@gmail.com"
+    "email": "info@apexsbg.com"
   }
   </script>
 </head>
@@ -449,7 +449,7 @@
             </li>
             <li>
               <strong>Email</strong>
-              <a href="mailto:toosecure5@gmail.com">toosecure5@gmail.com</a>
+              <a href="mailto:info@apexsbg.com">info@apexsbg.com</a>
             </li>
             <li>
               <strong>Hours</strong>
@@ -462,33 +462,18 @@
           </ul>
         </div>
 
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="field">
-            <label for="cf-name">Name</label>
-            <input id="cf-name" name="name" type="text" required autocomplete="name" />
-          </div>
-          <div class="field">
-            <label for="cf-email">Email</label>
-            <input id="cf-email" name="email" type="email" required autocomplete="email" />
-          </div>
-          <div class="field">
-            <label for="cf-service">Service of interest (optional)</label>
-            <select id="cf-service" name="service">
-              <option value="">Select a service…</option>
-              <option>Mobile Notary</option>
-              <option>Loan Signing</option>
-              <option>Apostille Facilitation</option>
-              <option>Live Scan / Biometric</option>
-              <option>Something else</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="cf-message">Message</label>
-            <textarea id="cf-message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-gold btn-lg">Send Message</button>
-          <p class="form-note" role="status" id="formNote">This is a demo form — no message will actually be sent.</p>
-        </form>
+        <div class="contact-form-wrap">
+          <div id="apex-hubspot-form"></div>
+          <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
+          <script>
+            hbspt.forms.create({
+              portalId: "247349300",
+              formId: "d68d8c49-6d28-4ec4-8347-a857204863c8",
+              region: "na2",
+              target: "#apex-hubspot-form"
+            });
+          </script>
+        </div>
       </div>
     </section>
 
@@ -522,7 +507,7 @@
 
       <div class="footer-contact">
         <h4>Get in Touch</h4>
-        <p><a href="mailto:toosecure5@gmail.com">toosecure5@gmail.com</a></p>
+        <p><a href="mailto:info@apexsbg.com">info@apexsbg.com</a></p>
         <p><a href="#book">Book an Appointment</a></p>
       </div>
 

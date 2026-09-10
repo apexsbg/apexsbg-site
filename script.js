@@ -172,22 +172,3 @@ renderFaqs();
 const yearEl = $('#year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Contact form (demo)
-const form = $('#contactForm');
-const note = $('#formNote');
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
-    if (!name || !email || !message) {
-      note.className = 'form-note error';
-      note.textContent = 'Please complete the required fields.';
-      return;
-    }
-    note.className = 'form-note success';
-    note.textContent = 'Thank you — a real submission endpoint will be connected before launch.';
-    form.reset();
-  });
-}
