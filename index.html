@@ -110,6 +110,104 @@
     </div>
 
     <div class="tagline">Professional by Standard · Trusted by Choice</div>
+
+    <form class="code-form" id="code-form" autocomplete="off">
+      <label for="code" class="code-label">Partner access</label>
+      <div class="code-row">
+        <input type="password" id="code" name="code" placeholder="Enter code" aria-label="Partner access code" autocomplete="off" spellcheck="false">
+        <button type="submit">Enter</button>
+      </div>
+      <div class="code-err" id="code-err" aria-live="polite"></div>
+    </form>
   </main>
+
+  <style>
+    .code-form {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    .code-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #8A6320;
+      margin-bottom: 10px;
+    }
+    .code-row {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    .code-row input {
+      flex: 1;
+      padding: 10px 12px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(196,154,74,0.3);
+      color: #FFFFFF;
+      font-family: inherit;
+      font-size: 14px;
+      border-radius: 2px;
+      outline: none;
+    }
+    .code-row input:focus {
+      border-color: #C49A4A;
+      background: rgba(255,255,255,0.12);
+    }
+    .code-row button {
+      padding: 10px 18px;
+      background: #C49A4A;
+      color: #071F41;
+      border: none;
+      font-family: inherit;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+    .code-row button:hover { background: #D9B26A; }
+    .code-err {
+      min-height: 18px;
+      margin-top: 10px;
+      font-size: 12px;
+      color: #F0D07F;
+    }
+  </style>
+
+  <script>
+    (function () {
+      var CODE = 'apex2026';
+      var TARGET = '/preview.html';
+
+      // Bookmarkable URL: apexsbg.com/?code=apex2026
+      try {
+        var p = new URLSearchParams(location.search);
+        if (p.get('code') === CODE) { location.replace(TARGET); return; }
+      } catch (e) {}
+
+      // Manual entry form
+      var form = document.getElementById('code-form');
+      var input = document.getElementById('code');
+      var err = document.getElementById('code-err');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var v = (input.value || '').trim();
+        if (v === CODE) {
+          err.textContent = '';
+          location.href = TARGET;
+        } else {
+          err.textContent = 'Incorrect code.';
+          input.focus();
+          input.select();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
