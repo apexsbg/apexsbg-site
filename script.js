@@ -37,7 +37,7 @@ const SERVICES = [
     key: 'corporate',
     title: 'Corporate & Business Services',
     description: 'Business document signings, resolutions, agreements, and more.',
-    status: 'coming_soon',
+    status: 'available',
     icon: 'building'
   },
   {
